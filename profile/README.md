@@ -14,32 +14,64 @@
 </p>
 
 <p align="center">
-  🌐 **[Official Website & Documentation](https://asok-framework.com)** | 📖 **[Quick Start Guide](https://asok-framework.com/docs/01-getting-started)** | 💬 **[Join Discord](https://discord.com/invite/aYYkuPT3qR)** | 🎥 **[YouTube Tutorials](https://www.youtube.com/@asok-framework)**
+  <a href="https://asok-framework.com/">
+    <img src="https://img.shields.io/badge/Website-asok--framework.com-1abc9c?style=flat-square&logo=google-chrome&logoColor=white" alt="Website" />
+  </a>
+  <a href="https://asok-framework.com/docs/01-getting-started">
+    <img src="https://img.shields.io/badge/Docs-Quick%20Start-34495e?style=flat-square&logo=gitbook&logoColor=white" alt="Docs" />
+  </a>
+  <a href="https://discord.com/invite/aYYkuPT3qR">
+    <img src="https://img.shields.io/badge/Discord-Join%20Chat-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+  <a href="https://www.youtube.com/@asok-framework">
+    <img src="https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
 </p>
 
 ---
 
-## 🎯 The Asok Philosophy
+## ⚡ Key Highlights
 
-Asok requires **no external runtime dependencies** (just Python 3.10+). Everything works together out of the box—from database to real-time reactive UI—while remaining extremely lightweight (~360KB), simple to audit, and secure by default.
+* **Zero Runtime Dependencies**: No Werkzeug, no Jinja2, no SQLAlchemy. Built purely on top of the Python standard library—making it ultra-lightweight (~360KB), secure, and immune to supply chain attacks.
+* **Islands Architecture**: Selective hydration of reactive client-side components combined with Static Site Generation (SSG) and Incremental Static Regeneration (ISR).
+* **Native Reactive UI**: Build stateful, live-updated templates without Vue, React, or heavy NPM build pipelines.
+* **Cohesive Ecosystem**: Complete with a built-in DB/ORM (SQLite, PG, MySQL), migration engine, automatic admin panel, OpenAPI auto-documentation, and vector search.
+
+---
+
+## 🚀 Quick Start (60 Seconds)
+
+1. **Install Asok** :
+   ```bash
+   pip install asok
+   ```
+2. **Create your WSGI app** (`app.py`) :
+   ```python
+   from asok import Asok, Request
+
+   app = Asok()
+
+   @app.get("/")
+   def home(request: Request):
+       return "Hello, Asok! Zero dependencies, pure speed."
+   ```
+3. **Run in development** :
+   ```bash
+   asok dev
+   ```
 
 ---
 
 ## 📁 Ecosystem Repositories
 
-Explore the core repositories and official integrations of the Asok ecosystem:
-
-### 📦 Core Framework & Docs
-* **[asok](https://github.com/asok-framework/asok)**: The core full-stack web framework repository (routing, ORM, security, WSGI/ASGI).
-* **[asok-docs](https://github.com/asok-framework/asok-docs)**: Official handbook, documentation pages, and developer references.
-
-### 🔌 Extensions & Integrations
-* **[asok-lucide](https://github.com/codewithmpia/asok-lucide)**: Server-side Lucide Icons integration, rendering clean, customizable SVGs with zero client-side JS.
-* **[asok-vscode](https://github.com/asok-framework/asok-vscode)**: VS Code editor integration, providing autocomplete, syntax, and snippets.
-* **[asok-awesome](https://github.com/asok-framework/asok-awesome)**: A curated showcase of third-party extensions, tools, resources, and templates.
-
-### 🌟 Examples & Templates
-* **[asok-examples](https://github.com/asok-framework/asok-examples)**: Ready-to-use starter templates, boilerplates, and code examples.
+| Repository | Status | Purpose |
+| :--- | :--- | :--- |
+| 📦 **[asok](https://github.com/asok-framework/asok)** | [![PyPI](https://img.shields.io/pypi/v/asok?color=blue)](https://pypi.org/project/asok/) | Core framework engine (routing, DB/ORM, WSGI/ASGI server). |
+| 📖 **[asok-docs](https://github.com/asok-framework/asok-docs)** | [![Documentation](https://img.shields.io/badge/docs-v0.4.0-success)](https://github.com/asok-framework/asok-docs) | Official handbook, cookbooks, and step-by-step guides. |
+| 🔌 **[asok-lucide](https://github.com/codewithmpia/asok-lucide)** | [![PyPI](https://img.shields.io/pypi/v/asok-lucide?color=orange)](https://pypi.org/project/asok-lucide/) | Server-side SVG Lucide Icons renderer extension. |
+| 💻 **[asok-vscode](https://github.com/asok-framework/asok-vscode)** | [![VS Code](https://img.shields.io/badge/VS%20Code-Extension-blueviolet)](https://github.com/asok-framework/asok-vscode) | Autocomplete, snippets, and routing helper extension. |
+| 💡 **[asok-awesome](https://github.com/asok-framework/asok-awesome)** | [![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/asok-framework/asok-awesome) | Showcase list of community plugins, tutorials, and templates. |
+| 🌟 **[asok-examples](https://github.com/asok-framework/asok-examples)** | [![Examples](https://img.shields.io/badge/Examples-Ready--to--use-9b59b6)](https://github.com/asok-framework/asok-examples) | Boilerplates, templates, and starter projects. |
 
 ---
 
