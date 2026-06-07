@@ -45,14 +45,11 @@
    ```bash
    pip install asok
    ```
-2. **Create your WSGI app** (`app.py`) :
+2. **Create a page controller** (`src/pages/page.py`) :
    ```python
-   from asok import Asok, Request
+   from asok import Request
 
-   app = Asok()
-
-   @app.get("/")
-   def home(request: Request):
+   def render(request: Request):
        return "Hello, Asok! Zero dependencies, pure speed."
    ```
 3. **Run in development** :
